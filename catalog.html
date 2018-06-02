@@ -8,19 +8,20 @@
 
 <body>
 
-  <header class="main_header">
-  <div class="main_header_logo"><img src="/logo.img" alt="Логотип"></div>
-  <nav class="main_header_menu">
-    <ul>
-      <li><a href="/info">Информация</a></li>
-      <li><a href="/photo-and-video">Фото и видео</a></li>
-      <li><a href="/map">Карта штата</a></li>
-      <li><a href="/hotels">Гостиницы</a></li>
-    </ul>
-  </nav>
+  <header class="header">
+      <div class="header__logo"><img src="/logo.img" alt="Логотип"></div>
+      <nav class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-listing"><a href="/info">Информация</a></li>
+          <li class="header__menu-listing"><a href="/photo-and-video">Фото и видео</a></li>
+          <li class="header__menu-listing"><a href="/map">Карта штата</a></li>
+          <li class="header__menu-listing"><a href="/hotels">Гостиницы</a></li>
+        </ul>
+      </nav>
   </header>
 
   <main>
+    <h1 class="title-hidden">Отдых в Седоне - выбор отеля</h1>
     <section class="filter">
     Инфраструктура:
     Тип жилья:
@@ -28,63 +29,68 @@
     Показать
     </section>
     <section class="catalog">
-      <span class="catalog_results">НАЙДЕНО: 3</span>
-      <div class="catalog_sorting">Сортировка</div>
-      <ul class="catalog_items">
-        <li class="catalog_items_list">
-          <h2 class="catalog_items_list_title">Amara Resort &#38; Spa</h2>
-          <img src="/img1.jpg" alt="Фотография гостиницы" class="catalog_items_list_picture">
-          <table class="catalog_items_list_price">
-            <tr>
-              <td>Гостиница</td>
-              <td>От 4000 Р.</td>
-            </tr>
-          </table>
-          <a href="/details" class="catalog_items_list_details">Подробнее</a>
-          <a href="/booking" class="catalog_items_list_booking">Забронировать</a>
-          <span class="catalog_items_list_rate">Рейтинг: 8,5</span>
+      <span class="catalog__results">НАЙДЕНО: 3</span>
+      <div class="catalog__sort">
+        <h4 class="catalog__sort-title">Сортировка</h4>
+        <ul class="catalog__sort-list">
+          <li class="catalog__sort-listing--active"><a href="/price">По цене</a></li>
+          <li class="catalog__sort-listing"><a href="/type">По типу</a></li>
+          <li class="catalog__sort-listing"><a href="/rating">По рейтингу</a></li>                
+        </ul>
+        <ul class="catalog__sort-updown">
+          <li class="catalog__sort-up"><a href="/up">По возрастанию</a></li>
+          <li class="catalog__sort-down"><a href="/down">По убыванию</a></li>                   
+        </ul>
+      </div>
+      <ul class="catalog__items">
+        <li class="catalog__item-list">
+          <h2 class="catalog__item-title">Amara Resort &#38; Spa</h2>
+          <img src="/img1.jpg" alt="Фотография гостиницы" class="catalog__item-picture">
+          <p class="catalog__item-price">
+            <span class="catalog__hotel">Гостиница</span>
+            <span class="catalog__price">От 4000 Р.</span>           
+          </p>
+          <a href="/details" class="catalog__item-link--light">Подробнее</a>
+          <a href="/booking" class="catalog__item-link--dark">Забронировать</a>
+          <span class="catalog__item-rating">Рейтинг: 8,5</span>
         </li>
-        <li class="catalog_items_list">
-          <h2 class="catalog_items_list_title">Desert Quail Inn</h2>
-          <img src="/img2.jpg" alt="Фотография мотеля" class="catalog_items_list_picture">
-          <table class="catalog_items_list_price">
-            <tr>
-              <td>Мотель</td>
-              <td>От 3000 Р.</td>
-            </tr>
-          </table>
-          <a href="/details" class="catalog_items_list_details">Подробнее</a>
-          <a href="/booking" class="catalog_items_list_booking">Забронировать</a>
-          <span class="catalog_items_list_rate">Рейтинг: 8,9</span>
+        <li class="catalog__item-list">
+          <h2 class="catalog__item-title">Desert Quail Inn</h2>
+          <img src="/img2.jpg" alt="Фотография мотеля" class="catalog__item-picture">
+          <p class="catalog__item-price">
+                <span class="catalog__hotel">Мотель</span>
+                <span class="catalog__price">От 3000 Р.</span>           
+          </p>  
+          <a href="/details" class="catalog__item-link--light">Подробнее</a>
+          <a href="/booking" class="catalog__item-link--dark">Забронировать</a>
+          <span class="catalog__item-rating">Рейтинг: 8,9</span>
         </li>
-        <li class="catalog_items_list">
-            <h2 class="catalog_items_list_title">Villas at Poco Diablo</h2>
-            <img src="/img3.jpg" alt="Фотография апартаментов" class="catalog_items_list_picture">
-            <table class="catalog_items_list_price">
-              <tr>
-                <td>Апартаменты</td>
-                <td>От 2000 Р.</td>
-              </tr>
-            </table>
-            <a href="/details" class="catalog_items_list_details">Подробнее</a>
-            <a href="/booking" class="catalog_items_list_booking">Забронировать</a>
-            <span class="catalog_items_list_rate">Рейтинг: 9,2</span>
+        <li class="catalog__item-list">
+            <h2 class="catalog__item-title">Villas at Poco Diablo</h2>
+            <img src="/img3.jpg" alt="Фотография апартаментов" class="catalog__item-picture">
+            <p class="catalog__item-price">
+                <span class="catalog__hotel">Апартаменты</span>
+                <span class="catalog__price">От 2000 Р.</span>           
+            </p>
+            <a href="/details" class="catalog__item-link--light">Подробнее</a>
+            <a href="/booking" class="catalog__item-link--dark">Забронировать</a>
+            <span class="catalog__item-rating">Рейтинг: 9,2</span>
         </li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <section class="footer_hashtag"></section>
-    <section class="footer_social">
-      <ul>
-        <li><a href="/twitter"><img src="twitter.img" alt="twitter"></a></li>
-        <li><a href="/facebook"><img src="facebook.img" alt="facebook"></a></li>
-        <li><a href="/youtube"><img src="youtube.img" alt="youtube"></a></li>
-      </ul>
-    </section>
-    <section class="footer_copyright"><img src="copyright-logo.jpg" alt="Сделано в HTML Academy"></section>
-  </footer>
+  <footer class="footer">
+      <div class="footer__hashtag"></div>
+      <div class="footer__social">
+        <ul class="footer__social-list">
+          <li class="footer__social-listing"><a href="/twitter"><img src="twitter.img">Twitter</a></li>
+          <li class="footer__social-listing"><a href="/facebook"><img src="facebook.img">Facebook</a></li>
+          <li class="footer__social-listing"><a href="/youtube"><img src="youtube.img">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer__coptright"><a href="https://htmlacademy.ru"><img src="copyright-logo.jpg">Сделано в HTML Academy</a></div>
+    </footer>
 
 </body>
 </html>

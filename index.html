@@ -7,88 +7,89 @@
 </head>
 
 <body>
-  <header class="main_header">
-    <div class="main_header_logo"><img src="/logo.img" alt="Логотип"></div>
-    <nav class="main_header_menu">
-      <ul>
-        <li><a href="/info">Информация</a></li>
-        <li><a href="/photo-and-video">Фото и видео</a></li>
-        <li><a href="/map">Карта штата</a></li>
-        <li><a href="/hotels">Гостиницы</a></li>
+  <header class="header">
+    <div class="header__logo"><img src="/logo.img" alt="Логотип"></div>
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-listing"><a href="/info">Информация</a></li>
+        <li class="header__menu-listing"><a href="/photo-and-video">Фото и видео</a></li>
+        <li class="header__menu-listing"><a href="/map">Карта штата</a></li>
+        <li class="header__menu-listing"><a href="/hotels">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="welcome_banner">
-      <img class="welcome_banner_text" src="welcome-text.jpg" alt="Welcome">
-      <img class="welcome_banner_stripe" src="stripe.jpg">
+    <h1 class="title-hidden">Отдых в Седоне</h1>
+    <div class="welcome-banner">
+      <img class="welcome-banner__text" src="welcome-text.jpg" alt="Welcome">
+      <img class="welcome-banner__stripe" src="stripe.jpg">
     </div>
     <section class="benefits">
-      <span class="benefits_slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</span>
-      <h2 class="benefits_title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
-      <ul class="benefits_reasons">
-        <li class="benefits_reasons_list">
-          <h3 class="benefits_reasons_title">Настоящий городок</h3> 
-          <span class="benefits_reasons_numbers">— №1 —</span>
-          <p class="benefits_reasons_detail">Седона — не аттракцион для туристов, там течет своя жизнь</p>
-          <ul class="benefits_reasons_list_extra">
-            <li class="benefits_reasons_list_extra">
-              <h4 class="benefits_reasons_list_extra_title">Жильё</h4>
-              <p class="benefits_reasons_list_extra_detail">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+      <p class="benefits__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      <h2 class="benefits__title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+      <ul class="benefits__reasons">
+        <li class="benefits__reasons-listing">
+          <h3 class="benefits__reasons-title">Настоящий городок</h3> 
+          <span class="benefits__reasons-numbers">— №1 —</span>
+          <p class="benefits__reasons-detail">Седона — не аттракцион для туристов, там течет своя жизнь</p>
+          <ul class="benefits__extra">
+            <li class="benefits__extra-listing">
+              <h4 class="benefits__extra-title">Жильё</h4>
+              <p class="benefits__extra-detail">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li class="benefits_reasons_list_extra">
-              <h4 class="benefits_reasons_list_extra_title">Еда</h4>
-              <p class="benefits_reasons_list_extra_detail">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <li class="benefits__extra-listing">
+              <h4 class="benefits__extra-title">Еда</h4>
+              <p class="benefits__extra-detail">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="benefits_reasons_list_extra">
-              <h4 class="benefits_reasons_list_extra_title">Сувениры</h4>
-              <p class="benefits_reasons_list_extra_detail">Не только китайского, но и местного производства!</p>
+            <li class="benefits__extra-listing">
+              <h4 class="benefits__extra-title">Сувениры</h4>
+              <p class="benefits__extra-detail">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
         </li>
-        <li class="benefits_reasons_list">
-          <h3 class="benefits_reasons_title">Там есть Мост дьявола</h3> 
-          <span class="benefits_reasons_numbers">— №2 —</span>
-          <p class="benefits_reasons_detail">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <li class="benefits__reasons-listing">
+          <h3 class="benefits__reasons-title">Там есть Мост дьявола</h3> 
+          <span class="benefits__reasons-numbers">— №2 —</span>
+          <p class="benefits__reasons-detail">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </li>
-        <li class="benefits_reasons_list">
-          <h3 class="benefits_reasons_title">Небольшая площадь</h3> 
-          <span class="benefits_reasons_numbers">— №3 —</span>
-          <p class="benefits_reasons_detail">Все достопримечательности  находятся очень близко</p>
+        <li class="benefits__reasons-listing">
+          <h3 class="benefits__reasons-title">Небольшая площадь</h3> 
+          <span class="benefits__reasons-numbers">— №3 —</span>
+          <p class="benefits__reasons-detail">Все достопримечательности  находятся очень близко</p>
         </li>
-        <li class="benefits_reasons_list">
-          <h3 class="benefits_reasons_title">Красивая дорога</h3> 
-          <span class="benefits_reasons_numbers">— №4 —</span>
-          <p class="benefits_reasons_detail">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <li class="benefits__reasons-listing">
+          <h3 class="benefits__reasons-title">Красивая дорога</h3> 
+          <span class="benefits__reasons-numbers">— №4 —</span>
+          <p class="benefits__reasons-detail">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="benefits_reasons_list">
-          <h3 class="benefits_reasons_title">Мало туристов</h3> 
-          <span class="benefits_reasons_numbers">— №5 —</span>
-          <p class="benefits_reasons_detail">Большинство едет в гранд каньон и толпится там</p>
+        <li class="benefits__reasons-listing">
+          <h3 class="benefits__reasons-title">Мало туристов</h3> 
+          <span class="benefits__reasons-numbers">— №5 —</span>
+          <p class="benefits__reasons-detail">Большинство едет в гранд каньон и толпится там</p>
         </li>
       </ul>
     </section>
-    <section class="search_hotel">
-      <span class="search_hotel_question">Заинтересовались?</span>
-      <p class="search_hotel_offer">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <a href="/search-form" class="search_hotel_action">Поиск гостиницы в Седоне</a>
+    <section class="search-hotel">
+      <p class="search-hotel__question">Заинтересовались?</p>
+      <p class="search-hotel__offer">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <a href="/search-form" class="search-hotel__action">Поиск гостиницы в Седоне</a>
     </section>
     <div class="map">
       <img src="map.jpg" alt="Карта Седоны">
     </div>
   </main>
 
-  <footer>
-    <section class="footer_hashtag"></section>
-    <section class="footer_social">
-      <ul>
-        <li><a href="/twitter"><img src="twitter.img" alt="twitter"></a></li>
-        <li><a href="/facebook"><img src="facebook.img" alt="facebook"></a></li>
-        <li><a href="/youtube"><img src="youtube.img" alt="youtube"></a></li>
+  <footer class="footer">
+    <div class="footer__hashtag"></div>
+    <div class="footer__social">
+      <ul class="footer__social-list">
+        <li class="footer__social-listing"><a href="/twitter"><img src="twitter.img">Twitter</a></li>
+        <li class="footer__social-listing"><a href="/facebook"><img src="facebook.img">Facebook</a></li>
+        <li class="footer__social-listing"><a href="/youtube"><img src="youtube.img">YouTube</a></li>
       </ul>
-    </section>
-    <section class="footer_copyright"><img src="copyright-logo.jpg" alt="Сделано в HTML Academy"></section>
+    </div>
+    <div class="footer__coptright"><a href="https://htmlacademy.ru"><img src="copyright-logo.jpg">Сделано в HTML Academy</a></div>
   </footer>
 
 </body>
