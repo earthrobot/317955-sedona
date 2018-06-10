@@ -22,11 +22,52 @@
 
   <main>
     <h1 class="visually-hidden">Отдых в Седоне - выбор отеля</h1>
-    <section class="filter">
-    Инфраструктура:
-    Тип жилья:
-    Стоимость в сутки (Р):
-    Показать
+    <section class="filters">
+    <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+    <fieldset>
+      <legend>Инфраструктура:</legend>
+      <ul>
+      <li class="filter-form__option">
+        <input type="checkbox" name="pool" id="filter-pool" checked>
+        <label for="filter-pool">Бассейн</label>     
+      </li>
+      <li class="filter-form__option">
+        <input type="checkbox" name="parking" id="filter-parking">
+        <label for="filter-parking">Парковка</label>    
+      </li>
+      <li class="filter-form__option">
+        <input type="checkbox" name="wifi" id="filter-wifi">
+        <label for="filter-wifi">Wi-Fi</label>    
+      </li>
+    </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Тип жилья:</legend>
+      <ul>
+        <li class="filter-form__option">
+        <input type="checkbox" name="hotel" id="filter-hotel" checked>
+        <label for="filter-hotel">Гостиница</label> 
+        </li>
+        <li class="filter-form__option">
+            <input type="checkbox" name="motel" id="filter-motel" checked>
+            <label for="filter-motel">Мотель</label> 
+        </li>
+        <li class="filter-form__option">
+            <input type="checkbox" name="apartment" id="filter-apartment" checked>
+            <label for="filter-apartment">Апартаменты</label> 
+        </li>
+      </ul>
+    </fieldset>
+    <div class="filter-form__option">
+    <label for="filter-cost">Стоимость в сутки (Р):</label>
+      <div class="filter-cost">
+        <p class="filter-cost__min">От 0</p>
+        <p class="filter-cost__max">До 3000</p>
+      </div>
+      <input type="range" name="cost" id="filter-cost" min="0" max="3000" step="1">
+    </div>
+    <button class="filter-form__button" type="submit">Показать</button>
+    </form>
     </section>
     <section class="catalog">
       <span class="catalog__results">НАЙДЕНО: 3</span>
