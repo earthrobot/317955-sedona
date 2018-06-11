@@ -9,13 +9,13 @@
 <body>
 
   <header class="header">
-      <div class="header__logo"><img src="img/logo.png" alt="Логотип"></div>
+      <div class="header__logo"><a href="/"><img src="img/logo.png" alt="Логотип"></a></div>
       <nav class="header-menu">
         <ul class="header-menu__list">
           <li class="header-menu__listing"><a href="/info">Информация</a></li>
           <li class="header-menu__listing"><a href="/photo-and-video">Фото и видео</a></li>
           <li class="header-menu__listing"><a href="/map">Карта штата</a></li>
-          <li class="header-menu__listing"><a href="/hotels">Гостиницы</a></li>
+          <li class="header-menu__listing"><a>Гостиницы</a></li>
         </ul>
       </nav>
   </header>
@@ -24,20 +24,20 @@
     <h1 class="visually-hidden">Отдых в Седоне - выбор отеля</h1>
     <section class="filters">
     <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-    <fieldset>
-      <legend>Инфраструктура:</legend>
+    <fieldset class="filter-form__fieldset">
+      <legend class="filter-form__legend">Инфраструктура:</legend>
       <ul>
       <li class="filter-form__option">
-        <input type="checkbox" name="pool" id="filter-pool" checked>
-        <label for="filter-pool">Бассейн</label>     
+        <input type="checkbox" class="filter-form__input" name="pool" id="filter-pool" checked>
+        <label for="filter-pool" class="filter-form__label">Бассейн</label>     
       </li>
       <li class="filter-form__option">
-        <input type="checkbox" name="parking" id="filter-parking">
-        <label for="filter-parking">Парковка</label>    
+        <input type="checkbox" class="filter-form__input" name="parking" id="filter-parking">
+        <label for="filter-parking" class="filter-form__label">Парковка</label>    
       </li>
       <li class="filter-form__option">
-        <input type="checkbox" name="wifi" id="filter-wifi">
-        <label for="filter-wifi">Wi-Fi</label>    
+        <input type="checkbox" class="filter-form__input" name="wifi" id="filter-wifi">
+        <label for="filter-wifi" class="filter-form__label">Wi-Fi</label>    
       </li>
     </ul>
     </fieldset>
@@ -45,26 +45,26 @@
       <legend>Тип жилья:</legend>
       <ul>
         <li class="filter-form__option">
-        <input type="checkbox" name="hotel" id="filter-hotel" checked>
-        <label for="filter-hotel">Гостиница</label> 
+        <input type="checkbox" class="filter-form__input" name="hotel" id="filter-hotel" checked>
+        <label for="filter-hotel" class="filter-form__label">Гостиница</label> 
         </li>
         <li class="filter-form__option">
-            <input type="checkbox" name="motel" id="filter-motel" checked>
-            <label for="filter-motel">Мотель</label> 
+            <input type="checkbox" class="filter-form__input" name="motel" id="filter-motel" checked>
+            <label for="filter-motel" class="filter-form__label">Мотель</label> 
         </li>
         <li class="filter-form__option">
-            <input type="checkbox" name="apartment" id="filter-apartment" checked>
-            <label for="filter-apartment">Апартаменты</label> 
+            <input type="checkbox" class="filter-form__input" name="apartment" id="filter-apartment" checked>
+            <label for="filter-apartment" class="filter-form__label">Апартаменты</label> 
         </li>
       </ul>
     </fieldset>
     <div class="filter-form__option">
-    <label for="filter-cost">Стоимость в сутки (Р):</label>
+    <label for="filter-cost" class="filter-form__label">Стоимость в сутки (Р):</label>
       <div class="filter-cost">
         <p class="filter-cost__min">От 0</p>
         <p class="filter-cost__max">До 3000</p>
       </div>
-      <input type="range" name="cost" id="filter-cost" min="0" max="3000" step="1">
+      <input type="range" class="filter-form__input" name="cost" id="filter-cost" min="0" max="3000" step="1">
     </div>
     <button class="filter-form__button" type="submit">Показать</button>
     </form>
@@ -130,7 +130,7 @@
         <li class="footer-social__listing"><a href="/youtube">YouTube</a></li>
       </ul>
     </div>
-    <div class="footer__coptright">Website by <a href="https://htmlacademy.ru">HTML Academy</a></div>
+    <div class="footer__coptright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></div>
   </footer>
 
 </body>

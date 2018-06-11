@@ -8,13 +8,13 @@
 
 <body>
   <header class="header">
-    <div class="header__logo"><img src="img/logo.png" width="138" height="70" alt="Логотип"></div>
+    <div class="header__logo"><a><img src="img/logo.png" width="138" height="70" alt="Логотип"></a></div>
     <nav class="header-menu">
       <ul class="header-menu__list">
         <li class="header-menu__listing"><a href="/info">Информация</a></li>
         <li class="header-menu__listing"><a href="/photo-and-video">Фото и видео</a></li>
         <li class="header-menu__listing"><a href="/map">Карта штата</a></li>
-        <li class="header-menu__listing"><a href="/hotels">Гостиницы</a></li>
+        <li class="header-menu__listing"><a href="/catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
 </header>
@@ -71,23 +71,23 @@
       <p class="search-hotel__question">Заинтересовались?</p>
       <p class="search-hotel__offer">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <form class="search-hotel__form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset>
-      <legend>Поиск гостиницы в Седоне</legend>
+      <fieldset class="form__fieldset">
+      <legend class="form__legend">Поиск гостиницы в Седоне</legend>
         <p class="form__item">
-          <label for="arrive-field">Дата заезда:</label>
-          <input type="date" name="date-arrive" id="arrive-field">
+          <label for="arrive-field" class="form__label">Дата заезда:</label>
+          <input type="text" class="form__input" name="date-arrive" id="arrive-field" value="" placeholder="24 апреля 2017">
         </p>
         <p class="form__item">
-          <label for="leave-field">Дата выезда:</label>           
-          <input type="date" name="date-leave" id="leave-field">
+          <label for="leave-field" class="form__label">Дата выезда:</label>           
+          <input type="text" class="form__input" name="date-leave" id="leave-field" value="" placeholder="4 июля 2017">
         </p>
         <p class="form__item">
-          <label for="adult-field">Взрослые:</label>
-        <input type="number" name="adult" id="adult-field">
+          <label for="adult-field" class="form__label">Взрослые:</label>
+        <input type="number" class="form__input" name="adult" id="adult-field">
         </p>
         <p class="form__item">
-          <label for="children-field">Дети:</label>
-        <input type="number" name="children" id="children-field">
+          <label for="children-field" class="form__label">Дети:</label>
+        <input type="number" class="form__input" name="children" id="children-field">
         </p>
         <button class="form__button" type="submit">Найти</button>
   </fieldset>
@@ -108,7 +108,7 @@
         <li class="footer-social__listing"><a href="/youtube">YouTube</a></li>
       </ul>
     </div>
-    <div class="footer__coptright">Website by <a href="https://htmlacademy.ru">HTML Academy</a></div>
+    <div class="footer__coptright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></div>
   </footer>
 
 </body>
