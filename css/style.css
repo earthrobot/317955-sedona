@@ -10,6 +10,21 @@ body {
     background-color: #ffffff;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
 a {
     text-decoration: none;
 }
@@ -258,18 +273,21 @@ fieldset {
     background-image: url("../img/logo-htmlacademy.svg");
     background-position: 80px 0;
     background-repeat: no-repeat;
-    background-size: content;    
+    background-size: contain;    
     line-height: 41px;
+    cursor: pointer;
  }
 
- .footer__coptright a {
-     color: transparent;
+ .footer__coptright a,
+ .footer-social__listing a {
+    font-size: 0;
  }
 
  .footer-social__listing {
      width: 46px;
      height: 48px;
      background-color: #81b3d2;
+     cursor: pointer;
  }
 
  .footer-social__listing:hover {
@@ -352,7 +370,16 @@ fieldset {
     text-decoration-color: #81b3d2;
  }
 
- .catalog-sort__listing.catalog-sort__listing--active a {
+ .catalog-sort__listing a:hover {
+    color: #81b3d2;
+ }
+
+ .catalog-sort__listing a:active {
+    color: #000000;
+    text-decoration-line: none;
+ }
+
+ .catalog-sort__listing--active a {
     color: #81b3d2;
     text-decoration-line: none;
  }
@@ -376,6 +403,8 @@ fieldset {
     height: 27px;
     font-weight: bold;
     color: #ffffff;
+    display: block;
+    text-align: center;
 }
 
 .catalog-items__link--light {
