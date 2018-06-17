@@ -10,33 +10,36 @@
 </head>
 
 <body>
+  <div class="layout">
   <header class="header">
-    <a class="header__logo"><img src="img/logo.png" width="138" height="70" alt="Логотип"></a>
     <nav class="header-menu">
+      <a class="header__logo"><img src="img/logo.png" width="138" height="70" alt="Логотип"></a>
       <ul class="header-menu__list">
         <li class="header-menu__listing"><a href="/info">Информация</a></li>
         <li class="header-menu__listing"><a href="/photo-and-video">Фото и видео</a></li>
         <li class="header-menu__listing"><a href="/map">Карта штата</a></li>
-        <li class="header-menu__listing"><a href="/catalog.html">Гостиницы</a></li>
+        <li class="header-menu__listing"><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
-</header>
+  </header>
 
   <main>
     <h1 class="visually-hidden">Отдых в Седоне</h1>
     <div class="welcome-banner"></div>
     <section class="benefits">
+      <div class="white-block">
       <p class="benefits__slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-      <h2 class="benefits__title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+      <p class="benefits__title">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    </div>
       <ul class="benefits-reasons">
         <li class="benefits-reasons__listing">
           <div class="benefits-reasons__picture-box picture-box__right">
             <div class="benefits-reasons__blue-box">
-            <h3 class="benefits-reasons__title">Настоящий городок</h3> 
-          <span class="benefits-reasons__numbers">— №1 —</span>
-          <p class="benefits-reasons__detail">Седона — не аттракцион для туристов, там течет своя жизнь</p>
-        </div>
-      </div>
+              <h3 class="benefits-reasons__title">Настоящий городок</h3> 
+              <span class="benefits-reasons__numbers">— №1 —</span>
+              <p class="benefits-reasons__detail">Седона — не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+          </div>
           <ul class="benefits-reasons__extra extra">
             <li class="extra__listing">
               <h4 class="extra__title">Жильё</h4>
@@ -80,7 +83,7 @@
     </section>
     <section class="search-hotel">
       <p class="search-hotel__question">Заинтересовались?</p>
-      <p class="search-hotel__offer">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="search-hotel__offer">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <form class="search-hotel__form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="form__fieldset">
       <legend class="form__legend">Поиск гостиницы в Седоне</legend>
@@ -123,8 +126,8 @@
         <li class="footer-social__listing footer-social__youtube"><a href="/youtube">YouTube</a></li>
       </ul>
     </div>
-    <div class="footer__coptright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></div>
+    <div class="footer__copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></div>
   </footer>
-
+</div>
 </body>
 </html>

@@ -7,7 +7,15 @@ body {
     line-height: 21px;
     color: #333333;
     text-transform: uppercase;
+    background-color: #f2f2f2;
+}
+
+.layout {
+    max-width: 1200px;
+    min-width: 768px;
+    margin: 0 auto;
     background-color: #ffffff;
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 img {
@@ -29,18 +37,51 @@ a {
     text-decoration: none;
 }
 
-.header-menu {
-    line-height: 26px;
-    color: #000000; 
-    background-color: #ffffff; 
-}
-
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
     margin: -1px;  
+}
+
+.header-menu {
+    line-height: 26px;
+    color: #000000; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header__logo {
+    position: absolute;
+}
+
+.header-menu__list {
+    display: flex;
+    height: 56px;
+    background-color: #ffffff; 
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-menu__listing {
+    display: block;
+    width: 239px;
+    height: 56px;
+    text-align: center;
+    padding-top: 15px;  
+}
+
+.header-menu__list li:first-child,
+.header-menu__list li:nth-child(2) {
+    margin-right: auto;
+}
+
+.header-menu__list li:nth-child(3),
+.header-menu__list li:nth-child(4) {
+    margin-left: auto;
 }
 
 .header-menu__list,
@@ -52,6 +93,8 @@ a {
 .benefits-reasons,
 .benefits-reasons__extra {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .header-menu a {
@@ -72,13 +115,32 @@ a {
     cursor: pointer;
 }
 
+.header-menu__listing--active a {
+    color: #766357;
+}
+
 .benefits-reasons__listing,
 .extra__listing,
 .benefits__slogan,
 .benefits__title,
 .search-hotel__question,
 .search-hotel__offer {
-    text-align: center;   
+    text-align: center;
+}
+
+.white-block {
+    min-height: 216px;
+    width: 100%;
+    text-align: center;
+    padding-top: 61px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.benefits__slogan {
+    width: 576px;
 }
 
 .welcome-banner {
@@ -91,10 +153,56 @@ a {
     background-size: contain, auto, cover;    
 }
 
+.search-hotel {
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+}
+
+.search-hotel__form {
+    display: flex;
+    justify-content: center;
+}
+
 .search-hotel__question {
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;    
+}
+
+.benefits-reasons {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;  
+}
+
+.benefits-reasons__listing {
+    display: flex;
+    flex-direction: column;         
+}
+
+.benefits-reasons__extra {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.extra__listing {
+    min-height: 330px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.extra__detail {
+    width: 300px;
 }
 
 .benefits__title {
@@ -123,31 +231,64 @@ a {
     background-color: #81b3d2;
     color: #ffffff;
     text-align: center;
-    vertical-align: middle;
+    padding-top: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
  }
 
  .benefits-reasons__blue-box h3 {
-     color: #ffffff;
+    color: #ffffff;     
+ }
+
+ .picture-box__right h3 {
+    width: 135px;
+ }
+
+ .picture-box__left h3 {
+     width: 160px;
+ }
+ 
+ .picture-box__right p {
+    width: 290px;     
+ }
+
+ .picture-box__left p {
+    width: 310px;     
  }
 
  .benefits-reasons__picture-box {
-     height: 256px;
-     width: 1200px;
-     background-image: url("../img/photo1.jpg");
-     background-repeat: no-repeat;
-     background-size: 800px auto;    
+    height: 256px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 800px auto;  
+    display: flex;
+    flex-direction: column;
+
  }
 
  .picture-box__right {
     background-position: 100% 50%;
+    background-image: url("../img/photo1.jpg");
  }
 
  .picture-box__left {
     background-position: 0 50%;
+    background-image: url("../img/photo2.jpg");
+    margin-left: auto;
+    align-items: flex-end;
+    min-width: 1200px;
+
  }
 
  .benefits-reasons__gray-back {
-   background-color: #eeeeee;  
+   background-color: #eeeeee; 
+   min-height: 256px;
+   min-width: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
  }
  
 
@@ -160,6 +301,7 @@ a {
     background-color: #766357;
     text-align: center;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .form__legend:hover {
@@ -186,6 +328,7 @@ fieldset {
     color: #ffffff;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .form__button:hover {
@@ -269,16 +412,30 @@ fieldset {
     border: solid 2px #e5e5e5;
 }
 
-.footer__coptright  {
+.footer {
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-social__list {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+.footer__copyright  {
     background-image: url("../img/logo-htmlacademy.svg");
     background-position: 80px 0;
     background-repeat: no-repeat;
-    background-size: contain;    
-    line-height: 41px;
+    background-size: 115px 41px;;    
     cursor: pointer;
+    width: 200px;
+    height: 50px;
  }
 
- .footer__coptright a,
+ .footer__copyright a,
  .footer-social__listing a {
     font-size: 0;
  }
@@ -344,7 +501,12 @@ fieldset {
     height: 32px;
     border: solid 2px #ffffff;
     background-color: transparent;
-    font: inherit;
+    font-family: "PT Sans Regular", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
  }
 
  .filter-cost {
