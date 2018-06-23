@@ -84,10 +84,11 @@
     <section class="search-hotel">
       <p class="search-hotel__question">Заинтересовались?</p>
       <p class="search-hotel__offer">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <button class="search-hotel__button">Поиск гостиницы в Седоне</button>
       <form class="search-hotel__form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="form__fieldset">
-      <legend class="form__legend">Поиск гостиницы в Седоне</legend>
-        <p class="form__item">
+      <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
+          <p class="form__item">
           <label for="arrive-field" class="form__label">Дата заезда:</label>
           <input type="text" class="form__input" name="date-arrive" id="arrive-field" value="" placeholder="24 апреля 2017">
         </p>
@@ -110,23 +111,22 @@
         <button class="form__button" type="submit">Найти</button>
   </fieldset>
 </form>
-
-    </section>
-    <div class="map">
+<div class="map">
       <img src="img/map.jpg" alt="Карта Седоны">
-    </div>
+</div>
+    </section> 
   </main>
 
   <footer class="footer">
     <div class="footer__hashtag">#visitSEDONA</div>
     <div class="footer-social">
       <ul class="footer-social__list">
-        <li class="footer-social__listing footer-social__twitter"><a href="/twitter">Twitter</a></li>
-        <li class="footer-social__listing footer-social__facebook"><a href="/facebook">Facebook</a></li>
-        <li class="footer-social__listing footer-social__youtube"><a href="/youtube">YouTube</a></li>
+        <li class="footer-social__listing footer-social__twitter"><a class="visually-hidden" href="/twitter">Twitter</a></li>
+        <li class="footer-social__listing footer-social__facebook"><a class="visually-hidden" href="/facebook">Facebook</a></li>
+        <li class="footer-social__listing footer-social__youtube"><a class="visually-hidden" href="/youtube">YouTube</a></li>
       </ul>
     </div>
-    <div class="footer__copyright">Website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></div>
+    <div class="footer__copyright">Website by <a class="visually-hidden" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a></div>
   </footer>
 </div>
 </body>
