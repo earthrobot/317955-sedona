@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
   
-    font-family: "PT Sans Regular", Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     color: #333333;
@@ -68,20 +68,28 @@ a {
     flex-wrap: wrap;
 }
 
-.header-menu__listing a {
+.header-menu__listing {
     display: block;
-    width: 239px;
     text-align: center;
-    padding-top: 15px;  
-    padding-bottom: 15px;
+    padding: 15px 72px;
+}
+
+.header-menu__listing:first-child,
+.header-menu__listing:nth-child(2) {
+    text-align: left;
+}
+
+.header-menu__listing:nth-child(3),
+.header-menu__listing:nth-child(4) {
+    text-align: right;
 }
 
 .header-menu__list li:nth-child(2) {
-    margin-right: 122px;
+    flex-grow: 2;
 }
 
 .header-menu__list li:nth-child(3) {
-    margin-left: 122px;
+    flex-grow: 2;
 }
 
 .header-menu__list,
@@ -92,6 +100,7 @@ a {
 .footer-social__list,
 .benefits-reasons,
 .benefits-reasons__extra,
+.filter-form__fieldset,
 .filter-form__fieldset ul {
     list-style: none;
     margin: 0;
@@ -100,24 +109,29 @@ a {
 
 .filter-form__option {
     margin: 0;
-    margin-bottom: 27px;
-    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.filter-form__option:last-child {
+    margin-bottom: 0;
 }
 
 .filter-form__left {
-    display: flex;   
+    display: flex; 
+    width: 391px;
+    justify-content: space-between;  
 }
 
 .filter-form__right {
     display: flex;    
     flex-wrap: wrap;
     flex-direction: column;
-    margin-right: 75px;
     align-items: center;
 }
 
 .filter-form__cost .filter-form__label {
     font-weight: bold;
+    font-size: 16px;
     line-height: 21px;
     margin-bottom: 12px;
 }
@@ -125,19 +139,35 @@ a {
 .catalog-sort__up {    
     width: 11px;
     height: 11px;
-    background-image: url("../img/icon-down-dir.svg");
+    background-image: url("../img/icon-up-dir-gray.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     cursor: pointer;
 }
 
+.catalog-sort__up:hover {
+    background-image: url("../img/icon-up-dir.svg");
+}
+
+.catalog-sort__up:active {
+    background-image: url("../img/icon-up-dir-blue.svg");
+}
+
 .catalog-sort__down {
     width: 11px;
     height: 11px;
-    background-image: url("../img/icon-up-dir.svg");
+    background-image: url("../img/icon-down-dir-gray.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     cursor: pointer;   
+}
+
+.catalog-sort__down:hover {
+    background-image: url("../img/icon-down-dir.svg");
+}
+
+.catalog-sort__down:active {
+    background-image: url("../img/icon-down-dir-blue.svg");
 }
 
 .header-menu a {
@@ -184,7 +214,7 @@ a {
     height: 509px;
     background-color: #00367cdc;
     background-image: url("../img/stripe.png"), url("../img/banner-text.png"), url("../img/background-photo.jpg");
-    background-position: bottom center, center center, top center;
+    background-position: bottom center, center center, 50% 21%;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: contain, auto, cover;   
     margin-bottom: 60px; 
@@ -210,7 +240,9 @@ a {
     position: absolute;
     z-index: 1; 
     top: 291px;
-    right: 314px;
+    left: 50%;
+    margin-left: -284px;
+    width: 568px;
 }
 
 .search-hotel__question {
@@ -397,6 +429,12 @@ a {
    padding-left: 70px;
  }
  
+.form-and-map{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+}
 
 .search-hotel__button {
     border: none;
@@ -459,6 +497,12 @@ fieldset {
 
 .form__item + .form__item-small {
     width: 228px;
+    display: flex;
+    align-items: center;
+}
+
+.form__small {
+    display: flex;
 }
 
 .form__item label {
@@ -482,9 +526,9 @@ fieldset {
     background-color: #ebebeb;
 }
 
-.form__item input:active {
+.form__item input:focus {
     background-color: #ffffff;
-    border: solid 2px #e5e5e5;
+    outline: solid 2px #e5e5e5;
 }
 
 .form__item-small input {
@@ -559,7 +603,14 @@ fieldset {
     background-size: 115px 41px;;    
     cursor: pointer;
     padding: 16px 152px 17px 15px;
+ }
 
+ .footer__copyright:hover {
+    background-image: url("../img/logo-htmlacademy-blue.svg");  
+ }
+
+ .footer__copyright:active {
+    background-image: url("../img/logo-htmlacademy-gray.svg");   
  }
 
  .footer-social__listing {
@@ -602,7 +653,7 @@ fieldset {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
-    padding: 13px 44px 12px 60px;;
+    padding: 13px 60px 12px;
  }
 
  .filters {
@@ -612,6 +663,7 @@ fieldset {
     background-color: #00367cdc;
     background-size: cover;
     color: #ffffff;
+    padding: 27px 72px 29px;
 }
 
  .filter-form {
@@ -627,14 +679,9 @@ fieldset {
      flex-wrap: wrap;
  }
 
- .filter-form__fieldset {
-    padding: 24px 48px 0 68px; 
- }
-
  .filter-form__cost {
      display: flex;
      flex-direction: column;
-     padding-top: 27px;
      margin-bottom: 20px;
  }
 
@@ -642,7 +689,7 @@ fieldset {
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
-    padding-top: 27px;
+    padding-bottom: 25px;
  }
 
  .filter-form__button {
@@ -659,6 +706,11 @@ fieldset {
     cursor: pointer;
  }
 
+ .filter-form__button:hover {
+    background-color: #ffffff;
+    color: #000000;
+ }
+
  .filter-cost {
     width: 314px;
     height: 32px;
@@ -670,6 +722,32 @@ fieldset {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 18px;
+ }
+
+ input[type="checkbox"] {
+     display: none;
+ }
+
+ input[type="checkbox"] + label {
+     position: relative;
+     padding-left: 40px;
+     vertical-align: top;
+     cursor: pointer;
+ }
+
+ input[type="checkbox"] + label::before {
+     content: "";
+     display: block;
+     width: 23px;
+     height: 23px;
+     background: url("../img/checkbox-off.svg") no-repeat;
+     background-position: 50% 50%;
+     position: absolute;     
+ }
+
+ input[type="checkbox"]:checked + label::before {
+    background: url("../img/checkbox-on.svg") no-repeat;
+    width: 27px;
  }
 
  .catalog__header {
@@ -745,6 +823,15 @@ fieldset {
     font-weight: bold;
     line-height: 26px;
     margin: 0;
+ }
+
+ .catalog-items__title:hover {
+    color: #81b3d2;
+    cursor: pointer;
+ }
+
+ .catalog-items__title:active {
+    color: #0000004d;
  }
 
  .catalog__results {
