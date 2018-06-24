@@ -88,24 +88,26 @@
       <form class="search-hotel__form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="form__fieldset">
       <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
-          <p class="form__item">
+        <p class="form__item form__item-big">
+          <button class="form__calendar">Выбрать дату</button>
           <label for="arrive-field" class="form__label">Дата заезда:</label>
           <input type="text" class="form__input" name="date-arrive" id="arrive-field" value="" placeholder="24 апреля 2017">
         </p>
-        <p class="form__item">
+        <p class="form__item form__item-big">
+          <button class="form__calendar">Выбрать дату</button>
           <label for="leave-field" class="form__label">Дата выезда:</label>           
           <input type="text" class="form__input" name="date-leave" id="leave-field" value="" placeholder="4 июля 2017">
         </p>
         <div class="form__small">
         <p class="form__item form__item-small">
           <label for="adult-field" class="form__label">Взрослые:</label>
-        <input type="text" class="form__input" name="adult" id="adult-field">
+        <input type="text" class="form__input" name="adult" id="adult-field" placeholder="2">
         <button class="control-count count-plus" type="button"></button>
         <button class="control-count count-minus" type="button"></button>
         </p>
         <p class="form__item form__item-small">
           <label for="children-field" class="form__label">Дети:</label>
-        <input type="text" class="form__input" name="children" id="children-field">
+        <input type="text" class="form__input" name="children" id="children-field" placeholder="0">
         <button class="control-count count-plus" type="button"></button>
         <button class="control-count count-minus" type="button"></button>
         </p>
