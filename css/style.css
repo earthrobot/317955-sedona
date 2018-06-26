@@ -16,6 +16,7 @@ body {
     margin: 0 auto;
     background-color: #ffffff;
     box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+    position: relative;
 }
 
 img {
@@ -213,7 +214,7 @@ a {
     height: 509px;
     background-color: #00367cdc;
     background-image: url("../img/stripe.png"), url("../img/banner-text.png"), url("../img/background-photo.jpg");
-    background-position: bottom center, center center, 50% 21%;
+    background-position: bottom center, 50% 48%, 50% 21%;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: contain, auto, cover;   
     margin-bottom: 60px; 
@@ -266,8 +267,8 @@ a {
 .extra__listing {
     padding-top: 161px;
     padding-bottom: 82px;
-    padding-right: 58px;
-    padding-left: 58px;
+    padding-right: 57px;
+    padding-left: 57px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,7 +286,6 @@ a {
     margin-bottom: 28px;
     position: absolute;
     top: 59px;
-    right: 163px;
 }
 
 .extra__listing:nth-child(2):before {
@@ -297,7 +297,6 @@ a {
     margin-bottom: 28px;
     position: absolute;
     top: 60px;
-    right: 161px;
 }
 
 .extra__listing:nth-child(3):before {
@@ -310,7 +309,6 @@ a {
     margin-bottom: 28px;
     position: absolute;
     top: 57px;
-    right: 162px;
 }
 
 .benefits__title {
@@ -381,7 +379,7 @@ a {
  }
 
  .picture-box__left h3 {
-     width: 150px;
+     width: 151px;
  }
  
  .picture-box__right p {
@@ -627,6 +625,11 @@ input[type="text"]::-webkit-input-placeholder {
     justify-content: space-between;
     align-items: center;
     min-width: 1200px;
+}
+
+.footer-main {
+    position: absolute;
+    bottom: 0;
 }
 
 .map {
