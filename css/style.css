@@ -136,6 +136,20 @@ a {
     margin-bottom: 12px;
 }
 
+.filter-form__range {
+    height: 23px;
+    width: 318px;
+    border: 1px solid white;
+}
+
+.filter-form__range::before {
+    content: "F";
+    width: 248px;
+    height: 2px;
+    background-color: #ffffff;
+    left: 2px;
+}
+
 .catalog-sort__up {    
     width: 11px;
     height: 11px;
@@ -363,7 +377,7 @@ a {
  }
 
  .benefits-reasons__detail {
-     width: 259px;
+     width: 261px;
  }
 
  .benefits-reasons__numbers {
@@ -422,8 +436,8 @@ a {
    align-items: center;
    padding-top: 48px;
    padding-bottom: 58px;
-   padding-right: 71px;
-   padding-left: 70px;
+   padding-right: 70px;
+   padding-left: 69px;
  }
  
 .form-and-map{
@@ -488,22 +502,32 @@ fieldset {
 
 .form__item {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     min-width: 160px;
 }
 
-.form__item + .form__item-small {
-    width: 228px;
+.form__item.form__item-small {
     display: flex;
     align-items: center;
 }
 
 .form__small {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
 }
 
 .form__item label {
     font-weight: bold;
+}
+
+.form__item-small label {
+    margin-right: 30px;  
+    order: 1;  
+}
+
+.form__item-small label:first-of-type {
+    margin-right: 35px;
 }
 
 .form__item input[type="text"] {
@@ -533,6 +557,7 @@ fieldset {
     height: 38px;
     padding-left: 10px;
     padding-right: 10px;
+    order: 3;
 }
 
 .form__item-big {
@@ -541,8 +566,8 @@ fieldset {
 
 .form__calendar {
     position: absolute;
-    left: 410px;
-    top: 5px;
+    left: 426px;
+    top: 7px;
     border: none;
     cursor: pointer;
     font-size: 0;
@@ -574,6 +599,7 @@ fieldset {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 11px 11px;
+    order: 4;
 }
 
 .count-plus:hover {
@@ -589,6 +615,7 @@ fieldset {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 12px 3px;
+    order: 2;
 }
 
 .count-minus:hover {
@@ -606,8 +633,11 @@ fieldset {
 input[type="text"] {
     font-weight: bold;
     color: #000000;   
-    padding: 0 13px;
-    padding-right: 35px;
+    padding: 0 35px 0 13px;
+}
+
+.form__item-big label {
+    margin-right: 15px;
 }
 
 input[type="text"]:-moz-placeholder { 
@@ -619,12 +649,19 @@ input[type="text"]::-webkit-input-placeholder {
 }
 
 .footer {
-    padding: 36px 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    min-height: 120px;
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 1200px;
+    min-width: 1056px;
 }
 
 .footer-main {
@@ -658,6 +695,10 @@ input[type="text"]::-webkit-input-placeholder {
  .footer__copyright:active {
     background-image: url("../img/logo-htmlacademy-gray.svg");   
  }
+
+ .footer-social {
+   margin-left: -15px;  
+ } 
 
  .footer-social__listing {
      width: 46px;
@@ -699,7 +740,9 @@ input[type="text"]::-webkit-input-placeholder {
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
-    padding: 13px 60px 12px;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 256px;
  }
 
  .filters {
@@ -728,7 +771,7 @@ input[type="text"]::-webkit-input-placeholder {
  .filter-form__cost {
      display: flex;
      flex-direction: column;
-     margin-bottom: 40px;
+     margin-bottom: 16px;
  }
 
  .filter-form__legend {
@@ -758,8 +801,8 @@ input[type="text"]::-webkit-input-placeholder {
  }
 
  .filter-cost {
-    width: 314px;
-    height: 32px;
+    width: 317px;
+    height: 34px;
     border: solid 2px #ffffff;
     border-radius: 2px;
     background-color: transparent;
@@ -768,6 +811,17 @@ input[type="text"]::-webkit-input-placeholder {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 18px;
+    position: relative;
+ }
+
+ .filter-cost::before {
+     content: "";
+     width: 2px;
+     height: 22px;
+     background-color: #ffffff;
+     left: 157px;
+     position: absolute;
+
  }
 
  input[type="checkbox"] + label {
@@ -890,10 +944,18 @@ input[type="text"]::-webkit-input-placeholder {
 }
 
  .catalog-items__list {
+    min-height: 152px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 30px 72px;
+    justify-content: center;
+    align-items: center;
     border-bottom: 1px solid #e5e5e5;    
+ }
+
+ .catalog-items__container {
+     display: flex;
+     justify-content: space-between;
+     flex-basis: 1056px;
  }
 
  .catalog-items__buttons {
@@ -907,11 +969,15 @@ input[type="text"]::-webkit-input-placeholder {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
-    margin-bottom: 11px;
+    margin-bottom: 14px;
+ }
+
+ .catalog-items__left-container {
+     display: flex;
  }
 
  .listing-left {
-     min-width: 651px;
+     margin-top: -3px;
  }
 
  .listing-right {
