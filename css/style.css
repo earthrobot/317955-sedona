@@ -158,6 +158,7 @@ a {
     background-size: cover;
     position: absolute;
     top: -8px;
+    cursor: pointer;
 }
 
 .filter-form__range::after {
@@ -171,6 +172,7 @@ a {
     position: absolute;
     top: -8px;
     right: 45px;
+    cursor: pointer;
 }
 
 .filter-cost__input {
@@ -240,6 +242,7 @@ a {
 
 .header-menu__listing--active a {
     color: #766357;
+    cursor: pointer;
 }
 
 .benefits-reasons__listing,
@@ -258,6 +261,10 @@ a {
 .benefits-reasons__listing {
     display: flex;
     flex-wrap: wrap;
+}
+
+.benefits-reasons__container {
+    display: flex;
 }
 
 .welcome-banner {
@@ -305,8 +312,7 @@ a {
 
 .benefits-reasons {
     display: flex;
-    flex-direction: row;  
-    flex-wrap: wrap;  
+    flex-direction: column;   
 }
 
 .benefits-reasons__extra {
@@ -459,21 +465,26 @@ a {
     background-image: url("../img/photo2.jpg");
     margin-left: auto;
     align-items: flex-end;
-    min-width: 1200px;
+ }
+
+ .benefits-reasons__inner-container {
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 11px;
  }
 
  .benefits-reasons__gray-back {
    background-color: #eeeeee; 
-   min-height: 145px;
-   min-width: 265px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding-top: 48px;
-   padding-bottom: 58px;
-   padding-right: 70px;
-   padding-left: 69px;
+   position: relative;
+   flex-basis: 400px;
+   min-height: 256px;
  }
  
 .form-and-map{
@@ -667,9 +678,16 @@ fieldset {
 }
 
 .form__item input[type="text"] {
-    font-weight: bold;
-    color: #000000;   
     padding: 0 35px 0 13px;
+}
+
+.form__item-big input[type="text"]:focus {
+    padding-left: 11px;
+}
+
+.form__item-small input[type="text"] {
+    padding: 0;
+    text-align: center;
 }
 
 .filter-cost input[type="text"] {
@@ -725,8 +743,8 @@ fieldset {
 
 .footer-social__list {
     display: flex;
-    width: 150px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer__copyright  {
@@ -747,7 +765,9 @@ fieldset {
  }
 
  .footer-social {
-   margin-left: -15px;  
+   margin-left: -15px;
+   display: flex;
+   flex-wrap: wrap;
  } 
 
  .footer-social__listing {
@@ -755,6 +775,11 @@ fieldset {
      height: 48px;
      background-color: #81b3d2;
      cursor: pointer;
+     margin-right: 6px;
+ }
+
+ .footer-social__listing:last-child {
+     margin-right: 0;
  }
 
  .footer-social__listing:hover {
@@ -1012,6 +1037,7 @@ fieldset {
     width: 258px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
  }
 
  .catalog-items__price {
