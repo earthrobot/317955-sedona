@@ -55,6 +55,7 @@ a {
 .benefits-reasons,
 .benefits-reasons__extra,
 .filter-form__fieldset,
+.filter-form__cost,
 .filter-form__fieldset ul {
     list-style: none;
     margin: 0;
@@ -126,14 +127,13 @@ a {
     display: flex;    
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
 }
 
 .filter-form__cost .filter-form__label {
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .filter-form__range {
@@ -145,7 +145,7 @@ a {
     rgba(255, 255, 255, 1) 80%,
     rgba(255, 255, 255, 0.3) 20%
     );
-    margin-bottom: 17px;
+    margin-bottom: 30px;
 }
 
 .filter-form__range::before {
@@ -269,7 +269,7 @@ a {
 
 .welcome-banner {
     height: 509px;
-    background-color: #00367cdc;
+    background-color: #000080;
     background-image: url("../img/stripe.png"), url("../img/banner-text.png"), url("../img/background-photo.jpg");
     background-position: bottom center, 50% 48%, 50% 21%;
     background-repeat: no-repeat, no-repeat, no-repeat;
@@ -283,7 +283,7 @@ a {
     flex-direction: column;
     justify-content: center; 
     align-items: center;
-    margin-bottom: 50px; 
+    padding-bottom: 50px; 
 }
 
 .search-hotel {
@@ -739,6 +739,7 @@ fieldset {
 
 .map {
     line-height: 0;
+    display: flex;
 }
 
 .footer-social__list {
@@ -824,7 +825,7 @@ fieldset {
     width: 100%; 
     background-image: url("../img/filter-background.jpg");
     background-position: top center;
-    background-color: #00367cdc;
+    background-color: #000080;
     background-size: cover;
     color: #ffffff;
     padding: 27px 72px 29px;
@@ -846,7 +847,6 @@ fieldset {
  .filter-form__cost {
      display: flex;
      flex-direction: column;
-     margin-bottom: 16px;
  }
 
  .filter-form__legend {
@@ -868,6 +868,7 @@ fieldset {
     color: #ffffff;
     text-transform: uppercase;
     cursor: pointer;
+    margin-left: 85px;
  }
 
  .filter-form__button:hover {
@@ -885,7 +886,7 @@ fieldset {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 21px;
     position: relative;
  }
 
@@ -996,13 +997,17 @@ fieldset {
     margin: 0;
  }
 
- .catalog-items__title:hover {
+ .catalog-items__title a {
+     color: #000000;
+ }
+
+ .catalog-items__title:hover a {
     color: #81b3d2;
     cursor: pointer;
  }
 
- .catalog-items__title:active {
-    color: #0000004d;
+ .catalog-items__title:active a {
+    color: rgba(0, 0, 0, 0.3);
  }
 
  .catalog__results {
