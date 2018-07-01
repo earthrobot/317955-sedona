@@ -94,7 +94,7 @@
       <p class="search-hotel__question">Заинтересовались?</p>
       <p class="search-hotel__offer">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <button class="search-hotel__button">Поиск гостиницы в Седоне</button>
-      <form class="search-hotel__form" action="https://echo.htmlacademy.ru" method="get">
+      <form class="search-hotel__form display-none" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="form__fieldset">
       <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
         <p class="form__item form__item-big">
@@ -109,13 +109,13 @@
         </p>
         <div class="form__small">
         <p class="form__item form__item-small">
-          <label for="adult-field" class="form__label">Взрослые:</label>
+          <label for="adult-field" class="form__label form-label__adult">Взрослые:</label>
         <input type="text" class="form__input" name="adult" id="adult-field" placeholder="2">
         <button class="control-count count-plus" type="button"></button>
         <button class="control-count count-minus" type="button"></button>
         </p>
         <p class="form__item form__item-small">
-          <label for="children-field" class="form__label">Дети:</label>
+          <label for="children-field" class="form__label form-label__children">Дети:</label>
         <input type="text" class="form__input" name="children" id="children-field" placeholder="0">
         <button class="control-count count-plus" type="button"></button>
         <button class="control-count count-minus" type="button"></button>
