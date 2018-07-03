@@ -1,0 +1,1 @@
+var button=document.querySelector(".search-hotel__button"),form=document.querySelector(".search-hotel__form");button.addEventListener("click",function(e){e.preventDefault(),form.classList.toggle("display-none")});
