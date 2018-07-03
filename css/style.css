@@ -733,11 +733,11 @@ fieldset {
     border: none;
 }
 
-.form__item-big input[type="text"] {
+.leave-input {
     margin-left: 17px;    
 }
 
-input#arrive-field[type="text"] {
+.arrive-input {
     margin-left: 21px;    
 }
 
