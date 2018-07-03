@@ -728,7 +728,8 @@ input#arrive-field[type="text"] {
 }
 
 .form__item input[type="text"]::-moz-placeholder { 
-    color: #000000; 
+    color: #000000;
+    opacity: 1;
 }
 
 .form__item input[type="text"]::-webkit-input-placeholder { 
@@ -737,6 +738,7 @@ input#arrive-field[type="text"] {
 
 .filter-cost input[type="text"]::-moz-placeholder { 
     color: #ffffff; 
+    opacity: 1;
 }
 
 .filter-cost input[type="text"]::-webkit-input-placeholder { 
@@ -769,6 +771,10 @@ input#arrive-field[type="text"] {
 .map {
     line-height: 0;
     display: flex;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
 }
 
 .footer-social__list {
