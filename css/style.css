@@ -1063,22 +1063,25 @@ a {
 }
 
 .footer-social__twitter {
-  width: 17px;
-  height: 15px;
+  width: 46px;
+  height: 48px;
+  background-position: center;
   background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
 }
 
 .footer-social__facebook {
-  width: 12px;
-  height: 22px;
+  width: 46px;
+  height: 48px;
+  background-position: center;
   background-image: url("../img/fb-icon.svg");
   background-repeat: no-repeat;
 }
 
 .footer-social__youtube {
-  width: 20px;
-  height: 16px;
+  width: 46px;
+  height: 48px;
+  background-position: center;
   background-image: url("../img/youtube.svg");
   background-repeat: no-repeat;
 }
